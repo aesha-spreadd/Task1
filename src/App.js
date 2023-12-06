@@ -1,11 +1,23 @@
 import React from 'react';
-import Card from './components/Card';
+import './Main.scss';
+import btnStyles from './Button.module.css';
 
 const App = () => {
   return (
-    <div style={{ textAlign: 'center', paddingTop: '50px' }}>
-      <h1>Welcome to My React Card App</h1>
-      <Card />
+    <div>
+      <header>
+        <h1>Welcome to My React App</h1>
+      </header>
+      <main>
+        <section>
+          <p>This is a simple React app. Feel free to explore!</p>
+        </section>
+        <section>
+          <h2>Buttons with Styles</h2>
+          <button className={btnStyles.success}>SUCCESS</button>
+          <button className={btnStyles.error}>ERROR</button>
+        </section>
+      </main>
     </div>
   );
 };
