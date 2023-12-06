@@ -7,6 +7,8 @@ const App = () => {
     <div>
       <header>
         <h1>Welcome to My React App</h1>
+        <h2> Here I am making some changes!!!!!!!</h2>
+        <h1> i WIll make sure it is working or not!!!</h1>
       </header>
       <main>
         <section>
