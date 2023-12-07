@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.jsx', // Change to .jsx if your file has JSX syntax
+  entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -15,7 +15,7 @@ module.exports = {
       clean: true,
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles.css', // Add this line with your preferred output file name
+      filename: 'styles.css',
     }),
   ],
   module: {
@@ -63,6 +63,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'], // Explicitly specify file extensions
+    extensions: ['.js', '.jsx'],
   },
 };
