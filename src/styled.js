@@ -1,4 +1,3 @@
-// src/styled.js
 import styled, { css } from 'styled-components';
 
 export const ButtonRowContainer = styled.div`
