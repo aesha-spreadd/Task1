@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,21 +10,21 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const ButtonCardContainer = styled.div`
+export const ButtonCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 `;
 
-const PublishButton = styled.button`
+export const PublishButton = styled.button`
   font-size: 16px;
   padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
 `;
 
-const Card = styled.div`
+export const Card = styled.div`
   background-color: #e49393;
   padding: 20px;
   border-radius: 8px;
