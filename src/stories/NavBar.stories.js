@@ -3,6 +3,10 @@ import React from 'react';
 import NavBar from '../NavBar';
 import * as Styled from '../NavBarStyled';
 
+// Import your SVG icons
+import homeIcon from '../assets/home.png';
+import infoIcon from '../assets/info.png';
+
 export default {
   title: 'NavBar',
   component: NavBar,
@@ -21,19 +25,23 @@ export const Navbar = () => (
           placeholder="Search"
         />
         <Styled.SearchIcon>🔍</Styled.SearchIcon>{' '}
-        {/* Replace with an actual search icon */}
       </Styled.NavbarInputContainer>
     </Styled.NavbarLeft>
     <Styled.NavbarLinks>
       <Styled.NavbarList>
-        <Styled.TextLink href="#">Home</Styled.TextLink>
-        <Styled.IconAfterLink>🏠</Styled.IconAfterLink>{' '}
-        {/* Replace with an actual home icon */}
+        <Styled.TextLink href="#">
+          Home <Styled.IconAfterLink></Styled.IconAfterLink>
+        </Styled.TextLink>
       </Styled.NavbarList>
       <Styled.NavbarList>
-        <Styled.TextLink href="#">About</Styled.TextLink>
-        <Styled.IconAfterLink>ℹ️</Styled.IconAfterLink>{' '}
-        {/* Replace with an actual info icon */}
+        <Styled.TextLink href="#">
+          About <Styled.IconAfterLink></Styled.IconAfterLink>
+        </Styled.TextLink>
+      </Styled.NavbarList>
+      <Styled.NavbarList>
+        <Styled.TextLink href="#">
+          Contact <Styled.IconAfterLink></Styled.IconAfterLink>
+        </Styled.TextLink>
       </Styled.NavbarList>
     </Styled.NavbarLinks>
   </Styled.NavbarContainer>

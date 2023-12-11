@@ -1,5 +1,6 @@
 // src/components/CardStyled.js
 import styled from 'styled-components';
+import theme from './theme'; // Update the path accordingly
 
 export const CardContainer = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ export const CardContainer = styled.div`
 export const SingleCard = styled.div`
   width: 30%;
   background-color: #fff;
-  border: 1px solid #e49393;
+  border: 1px solid ${theme.cardBorderColor};
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
@@ -33,18 +34,18 @@ export const CardBody = styled.div`
 export const CardTitle = styled.h2`
   font-size: 18px;
   margin-bottom: 8px;
-  color: #060047;
+  color: ${theme.cardTitleColor};
 `;
 
 export const CardText = styled.p`
   font-size: 15px;
-  color: #1640d6;
+  color: ${theme.cardTextColor};
 `;
 
 export const CardButton = styled.a`
   display: inline-block;
   padding: 8px 16px;
-  background-color: #e90064;
+  background-color: ${theme.cardButtonBg};
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -53,6 +54,6 @@ export const CardButton = styled.a`
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: #ff5f9e;
+    background-color: ${theme.cardButtonHoverBg};
   }
 `;

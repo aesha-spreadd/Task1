@@ -1,6 +1,6 @@
 // navbar.js
 import React from 'react';
-import * as Styled from './NavBarStyled'; // Correct the import path
+import * as Styled from './NavBarStyled';
 
 const NavBar = ({ children }) => (
   <nav className="navbar example-navbar navbar-background-light">

@@ -1,4 +1,6 @@
+// styled.js
 import styled, { css } from 'styled-components';
+import theme from './theme'; // Update the path accordingly
 
 export const ButtonRowContainer = styled.div`
   display: flex;
@@ -23,13 +25,14 @@ export const Button = styled.button`
     props.color &&
     css`
       &:hover {
-        background-color: ${props.color};
+        background-color: ${theme[props.color]};
         color: white;
       }
     `}
 
   &:active {
-    background-color: ${(props) => (props.color ? props.color : 'transparent')};
+    background-color: ${(props) =>
+      props.color ? theme[props.color] : 'transparent'};
     color: white;
   }
 
@@ -37,8 +40,8 @@ export const Button = styled.button`
     props.variant === 'outlined' &&
     css`
       background-color: transparent;
-      border: 1px solid ${props.color || 'black'};
-      color: ${props.color || 'black'};
+      border: 1px solid ${props.color ? theme[props.color] : 'black'};
+      color: ${props.color ? theme[props.color] : 'black'};
     `}
 
   ${(props) =>
@@ -52,12 +55,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'primary' &&
     css`
-      border-color: #ec8f5e;
-      color: #ec8f5e;
+      border-color: ${theme.primary};
+      color: ${theme.primary};
 
       &:hover,
       &:active {
-        background-color: #ec8f5e;
+        background-color: ${theme.primary};
         color: white;
       }
     `}
@@ -65,12 +68,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'warning' &&
     css`
-      border-color: #f3b664;
-      color: #f3b664;
+      border-color: ${theme.warning};
+      color: ${theme.warning};
 
       &:hover,
       &:active {
-        background-color: #f3b664;
+        background-color: ${theme.warning};
         color: white;
       }
     `}
@@ -78,12 +81,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'success' &&
     css`
-      border-color: #f1eb90;
-      color: #f1eb90;
+      border-color: ${theme.success};
+      color: ${theme.success};
 
       &:hover,
       &:active {
-        background-color: #f1eb90;
+        background-color: ${theme.success};
         color: white;
       }
     `}
@@ -91,12 +94,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'secondary' &&
     css`
-      border-color: #9fbb73;
-      color: #9fbb73;
+      border-color: ${theme.secondary};
+      color: ${theme.secondary};
 
       &:hover,
       &:active {
-        background-color: #9fbb73;
+        background-color: ${theme.secondary};
         color: white;
       }
     `}

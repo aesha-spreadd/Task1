@@ -1,5 +1,6 @@
 // navbarStyled.js
 import styled from 'styled-components';
+import theme from './theme'; // Update the path accordingly
 
 export const NavbarContainer = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ export const NavbarLeft = styled.div`
 export const NavbarTitle = styled.a`
   font-size: 1.5rem;
   font-weight: bold;
-  color: #e26ee5;
+  color: ${theme.primary};
   text-decoration: none;
   margin-right: 1rem;
 `;
@@ -40,7 +41,7 @@ export const SearchIcon = styled.span`
   top: 50%;
   right: 25px;
   transform: translateY(-50%);
-  color: #ccc;
+  color: ${theme.iconAfterLinkColor};
   cursor: pointer;
 `;
 
@@ -62,26 +63,26 @@ export const IconAfterLink = styled.span`
   top: 50%;
   left: 43px;
   transform: translateY(-50%);
+  color: ${theme.iconAfterLinkColor};
 `;
 
 export const ButtonOutlinedSecondary = styled.button`
   padding: 0.5rem 1rem;
-  border: 2px solid #e26ee5;
+  border: 2px solid ${theme.buttonOutlinedSecondaryBorder};
   border-radius: 5px;
   background-color: transparent;
-  color: #e26ee5;
+  color: ${theme.buttonOutlinedSecondaryBorder};
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: #e26ee5;
-    color: #fff;
+    background-color: ${theme.buttonOutlinedSecondaryBgHover};
+    color: ${theme.buttonOutlinedSecondaryColorHover};
   }
 `;
 
 export const Badge = styled.div`
   position: relative;
-  display: inline-block;
 `;
 
 export const Avatar = styled.img`
@@ -94,8 +95,8 @@ export const NumberBadge = styled.div`
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #ff3d00;
-  color: #fff;
+  background-color: ${theme.badgeBg};
+  color: ${theme.badgeText};
   border-radius: 50%;
   padding: 0.2rem 0.5rem;
   font-size: 0.8rem;
@@ -103,11 +104,12 @@ export const NumberBadge = styled.div`
 
 export const TextLink = styled.a`
   text-decoration: none;
-  color: #e26ee5;
+  color: ${theme.textLinkColor};
   font-weight: bold;
   transition: color 0.3s;
-  cursor:pointer,
+  cursor: pointer;
+
   &:hover {
-    color: #ff3d00;
+    color: ${theme.badgeBg};
   }
 `;
