@@ -52,12 +52,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'primary' &&
     css`
-      border-color: red;
-      color: red;
+      border-color: #ec8f5e;
+      color: #ec8f5e;
 
       &:hover,
       &:active {
-        background-color: red;
+        background-color: #ec8f5e;
         color: white;
       }
     `}
@@ -65,12 +65,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'warning' &&
     css`
-      border-color: orange;
-      color: orange;
+      border-color: #f3b664;
+      color: #f3b664;
 
       &:hover,
       &:active {
-        background-color: orange;
+        background-color: #f3b664;
         color: white;
       }
     `}
@@ -78,12 +78,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'success' &&
     css`
-      border-color: green;
-      color: green;
+      border-color: #f1eb90;
+      color: #f1eb90;
 
       &:hover,
       &:active {
-        background-color: green;
+        background-color: #f1eb90;
         color: white;
       }
     `}
@@ -91,12 +91,12 @@ export const Button = styled.button`
   ${(props) =>
     props.color === 'secondary' &&
     css`
-      border-color: grey;
-      color: grey;
+      border-color: #9fbb73;
+      color: #9fbb73;
 
       &:hover,
       &:active {
-        background-color: grey;
+        background-color: #9fbb73;
         color: white;
       }
     `}
