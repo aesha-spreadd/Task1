@@ -4,12 +4,18 @@ import theme from '../theme';
 
 export const StyledAlert = styled.div`
   height: 40px;
-  margin: 10px;
   border: 1px solid;
   box-sizing: border-box;
   padding: 10px;
   display: flex;
   align-items: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  opacity: 0.9;
+  margin: 0.5rem 0;
 `;
 
 const alertTextStyles = `

@@ -15,6 +15,11 @@ export const StyledButton = styled.button`
   ${commonStyles}
 `;
 
+const handlePrimaryClick = () => {
+  // Your custom logic for primary buttons
+  console.log('Primary button clicked');
+};
+
 export const PrimaryStyledButton = styled(StyledButton)`
   background-color: ${theme.primary};
   color: white;
@@ -24,6 +29,11 @@ export const PrimaryStyledButton = styled(StyledButton)`
   &:active {
     background-color: ${theme.primary};
     color: white;
+  }
+
+  /* Add the click event handling function */
+  &:active {
+    ${handlePrimaryClick}
   }
 `;
 
@@ -111,12 +121,37 @@ export const ContainedWarningStyledButton = styled(StyledButton)`
   }
 `;
 
-export const TextButton = styled(StyledButton)`
-  color: ${theme.primary};
+// Function to handle click events for primary buttons
+const handleTextButtonClick = () => {
+  // Your custom logic for text buttons
+  console.log('Text button clicked');
+};
 
-  &:hover {
-    color: white;
-    cursor: pointer;
+export const TextButtonPrimary = styled(StyledButton)`
+  color: ${theme.primary};
+  background-color: transparent; // No background color
+
+  /* Add the click event handling function */
+  &:active {
+    ${handleTextButtonClick}
   }
+`;
+
+// ... (other text button styles)
+
+export const TextButtonSecondary = styled(StyledButton)`
+  color: ${theme.secondary};
+
+  background-color: transparent; // No background color
+`;
+export const TextButtonSuccess = styled(StyledButton)`
+  color: ${theme.success};
+
+  background-color: transparent; // No background color
+`;
+
+export const TextButtonWarning = styled(StyledButton)`
+  color: ${theme.warning};
+
   background-color: transparent; // No background color
 `;

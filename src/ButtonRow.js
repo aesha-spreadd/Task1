@@ -1,27 +1,19 @@
 // Button.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import './styled'; // Import your button styles
 
-const StyledButton = styled.button`
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-`;
-
-const ButtonRow = ({ className, children, style, onClick }) => (
-  <StyledButton className={className} style={style} onClick={onClick}>
+const Button = ({ className, children, style, onClick }) => (
+  <button className={`button ${className}`} style={style} onClick={onClick}>
     {children}
-  </StyledButton>
+  </button>
 );
 
-ButtonRow.propTypes = {
+Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   style: PropTypes.object,
   onClick: PropTypes.func,
 };
 
-export default ButtonRow;
+export default Button;

@@ -1,4 +1,3 @@
-// Button.stories.js
 import React from 'react';
 import {
   PrimaryStyledButton,
@@ -9,39 +8,85 @@ import {
   ContainedSecondaryStyledButton,
   ContainedSuccessStyledButton,
   ContainedWarningStyledButton,
+  TextButtonWarning,
+  TextButtonPrimary,
+  TextButtonSecondary,
+  TextButtonSuccess,
   TextButton,
 } from '../styled';
-import theme from '../theme'; // Import your theme file
+import ButtonRow from '../ButtonRow';
 
 export default {
   title: 'Button',
+  component: ButtonRow, // <-- Corrected component name
 };
 
-export const BackgroundColoredButtons = () => (
+const buttonStyle = {
+  margin: '10px',
+  width: '200px',
+};
+
+export const ContainedButtons = () => (
   <div>
-    <PrimaryStyledButton>Primary Button</PrimaryStyledButton>
-    <SecondaryStyledButton>Secondary Button</SecondaryStyledButton>
-    <SuccessStyledButton>Success Button</SuccessStyledButton>
-    <WarningStyledButton>Warning Button</WarningStyledButton>
+    <PrimaryStyledButton style={buttonStyle}>
+      PRIMARY BUTTON
+    </PrimaryStyledButton>
+    <SecondaryStyledButton style={buttonStyle}>
+      SECONDARY BUTTON
+    </SecondaryStyledButton>
+    <SuccessStyledButton style={buttonStyle}>
+      SUCCESS BUTTON
+    </SuccessStyledButton>
+    <WarningStyledButton style={buttonStyle}>
+      WARNING BUTTON
+    </WarningStyledButton>
   </div>
 );
 
-export const ContainedButtonsWithBorder = () => (
+export const OutlinedButtons = () => (
   <div>
-    <ContainedPrimaryStyledButton>Primary Button</ContainedPrimaryStyledButton>
-    <ContainedSecondaryStyledButton>
-      Secondary Button
+    <ContainedPrimaryStyledButton style={buttonStyle}>
+      PRIMARY BUTTON
+    </ContainedPrimaryStyledButton>
+    <ContainedSecondaryStyledButton style={buttonStyle}>
+      SECONDARY BUTTON
     </ContainedSecondaryStyledButton>
-    <ContainedSuccessStyledButton>Success Button</ContainedSuccessStyledButton>
-    <ContainedWarningStyledButton>Warning Button</ContainedWarningStyledButton>
+    <ContainedSuccessStyledButton style={buttonStyle}>
+      SUCCESS BUTTON
+    </ContainedSuccessStyledButton>
+    <ContainedWarningStyledButton style={buttonStyle}>
+      WARNING BUTTON
+    </ContainedWarningStyledButton>
   </div>
 );
 
 export const TextButtons = () => (
   <div>
-    <TextButton style={{ color: theme.primary }}>Primary Button</TextButton>
-    <TextButton style={{ color: theme.secondary }}>Secondary Button</TextButton>
-    <TextButton style={{ color: theme.success }}>Success Button</TextButton>
-    <TextButton style={{ color: theme.warning }}>Warning Button</TextButton>
+    <TextButtonPrimary style={buttonStyle}>PRIMARY BUTTON</TextButtonPrimary>
+    <TextButtonSecondary style={buttonStyle}>
+      SECONDARY BUTTON
+    </TextButtonSecondary>
+    <TextButtonSuccess style={buttonStyle}>SUCCESS BUTTON</TextButtonSuccess>
+    <TextButtonWarning style={buttonStyle}>WARNING BUTTON</TextButtonWarning>
+  </div>
+);
+
+// New Story: Buttons with Icons
+export const ButtonsWithIcons = () => (
+  <div>
+    {/* Contained Buttons with Icons */}
+    <ContainedPrimaryStyledButton style={buttonStyle}>
+      <span role="img" aria-label="Icon">
+        🚀
+      </span>{' '}
+      PRIMARY BUTTON
+    </ContainedPrimaryStyledButton>
+
+    <PrimaryStyledButton style={buttonStyle}>
+      <span role="img" aria-label="Icon">
+        🚀
+      </span>{' '}
+      PRIMARY BUTTON
+    </PrimaryStyledButton>
   </div>
 );
