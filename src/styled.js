@@ -1,106 +1,122 @@
-// styled.js
-import styled, { css } from 'styled-components';
-import theme from './theme'; // Update the path accordingly
+// ButtonStyled.js
+import styled from 'styled-components';
+import theme from './theme'; // Import your theme file
 
-export const ButtonRowContainer = styled.div`
-  display: flex;
-  gap: 10px;
-`;
-
-export const Button = styled.button`
+const commonStyles = `
   padding: 10px;
   border: none;
   cursor: pointer;
-  font-size: 14px;
   border-radius: 4px;
-  background-color: white;
-  border: 1px solid black;
-  color: black;
+  font-size: 16px;
+  margin-right: 10px; // Add margin between buttons
+`;
 
-  &:hover {
-    background-color: transparent;
-  }
+export const StyledButton = styled.button`
+  ${commonStyles}
+`;
 
-  ${(props) =>
-    props.color &&
-    css`
-      &:hover {
-        background-color: ${theme[props.color]};
-        color: white;
-      }
-    `}
+export const PrimaryStyledButton = styled(StyledButton)`
+  background-color: ${theme.primary};
+  color: white;
+  border: 1px solid ${theme.primary};
 
+  &:hover,
   &:active {
-    background-color: ${(props) =>
-      props.color ? theme[props.color] : 'transparent'};
+    background-color: ${theme.primary};
     color: white;
   }
+`;
 
-  ${(props) =>
-    props.variant === 'outlined' &&
-    css`
-      background-color: transparent;
-      border: 1px solid ${props.color ? theme[props.color] : 'black'};
-      color: ${props.color ? theme[props.color] : 'black'};
-    `}
+export const SecondaryStyledButton = styled(StyledButton)`
+  background-color: ${theme.secondary};
+  color: white;
+  border: 1px solid ${theme.secondary};
 
-  ${(props) =>
-    props.variant === 'floating' &&
-    css`
-      position: relative;
-      z-index: 1;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    `}
+  &:hover,
+  &:active {
+    background-color: ${theme.secondary};
+    color: white;
+  }
+`;
 
-  ${(props) =>
-    props.color === 'primary' &&
-    css`
-      border-color: ${theme.primary};
-      color: ${theme.primary};
+export const SuccessStyledButton = styled(StyledButton)`
+  background-color: ${theme.success};
+  color: white;
+  border: 1px solid ${theme.success};
 
-      &:hover,
-      &:active {
-        background-color: ${theme.primary};
-        color: white;
-      }
-    `}
+  &:hover,
+  &:active {
+    background-color: ${theme.success};
+    color: white;
+  }
+`;
 
-  ${(props) =>
-    props.color === 'warning' &&
-    css`
-      border-color: ${theme.warning};
-      color: ${theme.warning};
+export const WarningStyledButton = styled(StyledButton)`
+  background-color: ${theme.warning};
+  color: white;
+  border: 1px solid ${theme.warning};
 
-      &:hover,
-      &:active {
-        background-color: ${theme.warning};
-        color: white;
-      }
-    `}
+  &:hover,
+  &:active {
+    background-color: ${theme.warning};
+    color: white;
+  }
+`;
 
-  ${(props) =>
-    props.color === 'success' &&
-    css`
-      border-color: ${theme.success};
-      color: ${theme.success};
+export const ContainedPrimaryStyledButton = styled(StyledButton)`
+  background-color: white;
+  color: ${theme.primary};
+  border: 1px solid ${theme.primary};
 
-      &:hover,
-      &:active {
-        background-color: ${theme.success};
-        color: white;
-      }
-    `}
+  &:hover,
+  &:active {
+    background-color: ${theme.primary};
+    color: white;
+  }
+`;
 
-  ${(props) =>
-    props.color === 'secondary' &&
-    css`
-      border-color: ${theme.secondary};
-      color: ${theme.secondary};
+export const ContainedSecondaryStyledButton = styled(StyledButton)`
+  background-color: white;
+  color: ${theme.secondary};
+  border: 1px solid ${theme.secondary};
 
-      &:hover,
-      &:active {
-        background-color: ${theme.secondary};
-        color: white;
-      }
-    `}
+  &:hover,
+  &:active {
+    background-color: ${theme.secondary};
+    color: white;
+  }
+`;
+
+export const ContainedSuccessStyledButton = styled(StyledButton)`
+  background-color: white;
+  color: ${theme.success};
+  border: 1px solid ${theme.success};
+
+  &:hover,
+  &:active {
+    background-color: ${theme.success};
+    color: white;
+  }
+`;
+
+export const ContainedWarningStyledButton = styled(StyledButton)`
+  background-color: white;
+  color: ${theme.warning};
+  border: 1px solid ${theme.warning};
+
+  &:hover,
+  &:active {
+    background-color: ${theme.warning};
+    color: white;
+  }
+`;
+
+export const TextButton = styled(StyledButton)`
+  color: ${theme.primary};
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+  background-color: transparent; // No background color
 `;
