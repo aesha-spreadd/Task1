@@ -1,7 +1,6 @@
-// Button.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styled'; // Import your button styles
+import './styled';
 
 const Button = ({ className, children, style, onClick }) => (
   <button className={`button ${className}`} style={style} onClick={onClick}>

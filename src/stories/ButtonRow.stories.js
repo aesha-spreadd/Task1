@@ -1,6 +1,9 @@
 import React from 'react';
 import {
   PrimaryStyledButton,
+  buttonStyle,
+  ButtonIcon,
+  IconImg,
   SecondaryStyledButton,
   SuccessStyledButton,
   WarningStyledButton,
@@ -12,18 +15,14 @@ import {
   TextButtonPrimary,
   TextButtonSecondary,
   TextButtonSuccess,
+  commonButtonStyles,
   TextButton,
 } from '../styled';
 import ButtonRow from '../ButtonRow';
 
 export default {
   title: 'Button',
-  component: ButtonRow, // <-- Corrected component name
-};
-
-const buttonStyle = {
-  margin: '10px',
-  width: '200px',
+  component: ButtonRow,
 };
 
 export const ContainedButtons = () => (
@@ -70,23 +69,20 @@ export const TextButtons = () => (
     <TextButtonWarning style={buttonStyle}>WARNING BUTTON</TextButtonWarning>
   </div>
 );
-
-// New Story: Buttons with Icons
 export const ButtonsWithIcons = () => (
   <div>
-    {/* Contained Buttons with Icons */}
     <ContainedPrimaryStyledButton style={buttonStyle}>
-      <span role="img" aria-label="Icon">
-        🚀
-      </span>{' '}
-      PRIMARY BUTTON
+      <ButtonIcon>
+        <IconImg src="https://i.pravatar.cc/43" alt="Custom Icon" />
+        PRIMARY BUTTON
+      </ButtonIcon>
     </ContainedPrimaryStyledButton>
 
     <PrimaryStyledButton style={buttonStyle}>
-      <span role="img" aria-label="Icon">
-        🚀
-      </span>{' '}
-      PRIMARY BUTTON
+      <ButtonIcon>
+        <IconImg src="https://i.pravatar.cc/41" alt="Custom Icon" />
+        PRIMARY BUTTON
+      </ButtonIcon>
     </PrimaryStyledButton>
   </div>
 );
