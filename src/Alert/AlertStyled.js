@@ -25,49 +25,49 @@ const alertTextStyles = `
 `;
 
 export const PrimaryAlert = styled(StyledAlert)`
-  color: white;
+  color: ${theme.badgeText};
   background-color: ${theme.primary};
   ${alertTextStyles}
 `;
 
 export const SecondaryAlert = styled(StyledAlert)`
-  color: white;
+  color: ${theme.badgeText};
   background-color: ${theme.secondary};
   ${alertTextStyles}
 `;
 
 export const SuccessAlert = styled(StyledAlert)`
-  color: white;
+  color: ${theme.badgeText};
   background-color: ${theme.success};
   ${alertTextStyles}
 `;
 
 export const WarningAlert = styled(StyledAlert)`
-  color: white;
+  color: ${theme.badgeText};
   background-color: ${theme.warning};
   ${alertTextStyles}
 `;
 
 export const OutlinePrimaryAlert = styled(StyledAlert)`
   color: ${theme.primary};
-  background-color: white;
+  background-color: ${theme.badgeText};
   ${alertTextStyles}
 `;
 
 export const OutlineSecondaryAlert = styled(StyledAlert)`
   color: ${theme.secondary};
-  background-color: white;
+  background-color: ${theme.badgeText};
   ${alertTextStyles}
 `;
 
 export const OutlineSuccessAlert = styled(StyledAlert)`
   color: ${theme.success};
-  background-color: white;
+  background-color: ${theme.badgeText};
   ${alertTextStyles}
 `;
 
 export const OutlineWarningAlert = styled(StyledAlert)`
   color: ${theme.warning};
-  background-color: white;
+  background-color: ${theme.badgeText};
   ${alertTextStyles}
 `;
