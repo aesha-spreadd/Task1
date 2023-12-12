@@ -8,7 +8,7 @@ const commonStyles = `
   cursor: pointer;
   border-radius: 4px;
   font-size: 16px;
-  margin-right: 10px; // Add margin between buttons
+  margin-right: 10px;
 `;
 
 export const StyledButton = styled.button`
@@ -16,9 +16,19 @@ export const StyledButton = styled.button`
 `;
 
 const handlePrimaryClick = () => {
-  // Your custom logic for primary buttons
   console.log('Primary button clicked');
 };
+
+export const ButtonIcon = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const IconImg = styled.img`
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-right: 8px;
+`;
 
 export const PrimaryStyledButton = styled(StyledButton)`
   background-color: ${theme.primary};
@@ -31,9 +41,20 @@ export const PrimaryStyledButton = styled(StyledButton)`
     color: white;
   }
 
-  /* Add the click event handling function */
   &:active {
     ${handlePrimaryClick}
+  }
+`;
+
+export const ContainedPrimaryStyledButton = styled(StyledButton)`
+  background-color: white;
+  color: ${theme.primary};
+  border: 1px solid ${theme.primary};
+
+  &:hover,
+  &:active {
+    background-color: ${theme.primary};
+    color: white;
   }
 `;
 
@@ -69,18 +90,6 @@ export const WarningStyledButton = styled(StyledButton)`
   &:hover,
   &:active {
     background-color: ${theme.warning};
-    color: white;
-  }
-`;
-
-export const ContainedPrimaryStyledButton = styled(StyledButton)`
-  background-color: white;
-  color: ${theme.primary};
-  border: 1px solid ${theme.primary};
-
-  &:hover,
-  &:active {
-    background-color: ${theme.primary};
     color: white;
   }
 `;
@@ -121,9 +130,7 @@ export const ContainedWarningStyledButton = styled(StyledButton)`
   }
 `;
 
-// Function to handle click events for primary buttons
 const handleTextButtonClick = () => {
-  // Your custom logic for text buttons
   console.log('Text button clicked');
 };
 
