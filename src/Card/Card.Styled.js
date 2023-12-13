@@ -1,6 +1,6 @@
 // src/components/CardStyled.js
 import styled from 'styled-components';
-import theme from './theme';
+import theme from '../theme';
 
 export const CardContainer = styled.div`
   display: flex;
@@ -68,19 +68,51 @@ export const ErenYeagerCardContainer = styled.div`
   transition: 500ms;
   margin: 0.5rem;
   border: 1px solid ${theme.cardBorderColor};
+  background-color: rgb(246, 249, 252);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  column-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: 'Rubik', sans-serif;
+  font-size: 6px;
+  height: 109.875px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  max-width: 300px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  row-gap: 10px;
+  transition-behavior: normal;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease;
 `;
 
 export const ErenYeagerCardTitle = styled.div`
   color: ${theme.primary};
-  font-size: 1.8rem;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
   font-weight: 500;
 `;
 
 export const ErenYeagerCardText = styled.div`
-  color: var(--default-color);
-  font-size: 1.4rem;
+  color: rgb(74, 74, 104);
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.4em;
+  height: 78.375px;
+  line-height: 19.6px;
 `;
 
 export const EcommerceCardBadge = styled.div`

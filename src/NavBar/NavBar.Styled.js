@@ -1,6 +1,6 @@
 // navbarStyled.js
 import styled from 'styled-components';
-import theme from './theme'; // Update the path accordingly
+import theme from '../theme'; // Update the path accordingly
 
 export const NavbarContainer = styled.div`
   display: flex;

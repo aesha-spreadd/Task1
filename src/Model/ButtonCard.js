@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ButtonCardStyled from './ButttonCardStyled';
+import ButtonCardStyled from './ButttonCard.Styled';
 
 const ButtonCard = () => {
   const [showCard, setShowCard] = useState(false);

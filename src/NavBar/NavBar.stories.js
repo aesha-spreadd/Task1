@@ -1,7 +1,7 @@
 // navbar.stories.js
 import React from 'react';
-import NavBar from '../NavBar';
-import * as Styled from '../NavBarStyled';
+import NavBar from './NavBar';
+import * as Styled from './NavBar.Styled';
 
 // Import your SVG icons
 import homeIcon from '../assets/home.png';

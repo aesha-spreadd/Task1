@@ -1,7 +1,7 @@
 // src/components/card.stories.js
 import React from 'react';
-import Card from '../Card';
-import EcommerceCard from '../Card';
+import Card from './Card';
+import EcommerceCard from './Card';
 
 import {
   ErenYeagerCardContainer,
@@ -13,7 +13,7 @@ import {
   CardImage,
   CardsImage,
   CardsText,
-} from '../CardStyled';
+} from './Card.Styled';
 
 export default {
   title: 'Card',

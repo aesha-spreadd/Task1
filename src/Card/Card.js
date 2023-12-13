@@ -8,7 +8,7 @@ import {
   CardTitle,
   CardText,
   CardButton,
-} from './CardStyled';
+} from './Card.Styled';
 
 const Card = ({ imageSrc, title, text, buttonLabel }) => (
   <SingleCard>

@@ -1,6 +1,6 @@
 // Alert.stories.js
 import React from 'react';
-import Alert from '../Alert/Alert';
+import Alert from './Alert';
 import {
   PrimaryAlert,
   SecondaryAlert,
@@ -10,7 +10,7 @@ import {
   OutlineSecondaryAlert,
   OutlineSuccessAlert,
   OutlineWarningAlert,
-} from '../Alert/AlertStyled';
+} from './Alert.Styled';
 
 export default {
   title: 'Alert',

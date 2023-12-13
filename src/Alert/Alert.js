@@ -1,6 +1,6 @@
 // Alert.js
 import React from 'react';
-import './AlertStyled';
+import './Alert.Styled';
 
 const Alert = ({ type, message, outline = false }) => {
   const alertClass = outline ? `outline-${type}` : type;
