@@ -3,6 +3,7 @@ module.exports = {
     ecmaVersion: 2021,
     sourceType: 'module',
   },
+  parser: 'babel-eslint',
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   rules: {
     'unused-imports/no-unused-imports': 'error',

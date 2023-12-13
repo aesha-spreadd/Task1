@@ -1,14 +1,18 @@
-// src/ButtonRow.js
 import React from 'react';
-import { ButtonRowContainer, Button } from './styled';
+import PropTypes from 'prop-types';
+import './styled';
 
-export const ButtonRow = () => {
-  return (
-    <ButtonRowContainer>
-      <Button color="primary">PRIMARY BUTTON</Button>
-      <Button color="secondary">SECONDARY BUTTON</Button>
-      <Button color="success">SUCCESS BUTTON</Button>
-      <Button color="warning">WARNING BUTTON</Button>
-    </ButtonRowContainer>
-  );
+const Button = ({ className, children, style, onClick }) => (
+  <button className={`button ${className}`} style={style} onClick={onClick}>
+    {children}
+  </button>
+);
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
 };
+
+export default Button;
