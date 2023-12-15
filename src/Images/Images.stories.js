@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Images, Circle } from './Images'; // Correct import statement
+import { Images, Circle, Responsive } from './Images'; // Correct import statement
 
 export default {
   title: 'Images',
@@ -9,3 +9,4 @@ export default {
 
 export const SquareImage = () => <Images />;
 export const CircularImage = () => <Circle />;
+export const ResponsiveImage = () => <Responsive />;

@@ -17,6 +17,11 @@ const theme = {
   badgeBg: '#ff3d00',
   badgeText: '#fff',
   textLinkColor: '#000',
+  inputBorder: 'rgb(74, 74, 104)',
+  textColor: 'rgb(246, 249, 252)',
+  successColor: 'rgb(76, 175, 80)',
+  dangerColor: 'rgb(244, 67, 54)',
+  secondaryColor: 'rgb(255, 152, 0)',
 };
 
 export default theme;

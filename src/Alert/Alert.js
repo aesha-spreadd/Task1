@@ -7,7 +7,7 @@ const Alert = ({ type, message, outline = false }) => {
 
   return (
     <div className={`alert ${alertClass}`}>
-      <strong className="au-alert-text">
+      <strong>
         {type.charAt(0).toUpperCase() + type.slice(1)}!
       </strong>{' '}
       {message}
