@@ -1,21 +1,10 @@
-// toast.stories.js
 import React from 'react';
-import Toast from './Toast';
+import { Toast } from './Toast';
+import { ToastContainer } from './Toast.Styled';
 
 export default {
   title: 'Toast',
+  component: ToastContainer,
 };
 
-const toastMessages = {
-  success: 'Successful toast for user action.',
-  warning: 'Warning toast for user action.',
-  danger: 'Danger toast for user action.',
-};
-
-export const ToastExamples = () => (
-  <>
-    <Toast type="success" message={toastMessages.success} />
-    <Toast type="warning" message={toastMessages.warning} />
-    <Toast type="danger" message={toastMessages.danger} />
-  </>
-);
+export const Sentance = () => <Toast />;

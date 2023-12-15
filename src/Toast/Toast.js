@@ -1,22 +1,28 @@
-// toast.js
 import React from 'react';
 import {
   ToastContainer,
-  Toast,
+  ToastSuccess,
+  ToastDanger,
+  ToastWarning,
   ToastText,
-  ToastMainContainer,
+  ToastTextD,
+  ToastTextW,
 } from './Toast.Styled';
 
-const ToastComponent = ({ type, message }) => {
+export const Toast = () => {
   return (
-    <ToastMainContainer>
-      <ToastContainer>
-        <Toast className={type}>
-          <ToastText type={type}>{message}</ToastText>
-        </Toast>
-      </ToastContainer>
-    </ToastMainContainer>
+    <ToastContainer>
+      <ToastSuccess>
+        <ToastText>Successful toast for user action.</ToastText>
+      </ToastSuccess>
+
+      <ToastWarning>
+        <ToastTextW>Warning toast for user action.</ToastTextW>
+      </ToastWarning>
+
+      <ToastDanger>
+        <ToastTextD>Danger toast for user action.</ToastTextD>
+      </ToastDanger>
+    </ToastContainer>
   );
 };
-
-export default ToastComponent;
