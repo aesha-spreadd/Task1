@@ -3,7 +3,7 @@ import { NavBar } from './NavBar';
 import { NavbarMainContainer } from './NavBar.Styled';
 
 export default {
-  title: 'NavBar',
+  title: 'NavBars',
   component: NavBar,
 };
 

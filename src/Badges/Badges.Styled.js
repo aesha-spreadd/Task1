@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
-// Common styles for badge containers
 export const BadgesContainer = styled.div`
   align-items: center;
-  background-color: rgb(255, 237, 237);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background-color: ${theme.cardMain};
+  border-radius: 5px;
   column-gap: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -16,35 +12,26 @@ export const BadgesContainer = styled.div`
   font-size: 6px;
   height: 55.5px;
   justify-content: center;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 15px;
+  margin: 0;
+  padding: 15px 50px;
   row-gap: 10px;
   width: 866px;
 `;
 
 export const BadgesContainerFirst = styled.div`
   display: flex;
-
   align-items: center;
   margin-right: 10px;
 `;
 
 export const BadgesContainerSecond = styled.div`
   display: flex;
-  //position: relative;
-  align-items: center; // Added position property
+  align-items: center;
   margin-right: 10px;
 `;
 
 export const BadgesContainerThird = styled.div`
   display: flex;
-  // position: relative; // Added position property
   align-items: center;
   margin-right: 10px;
 `;
@@ -69,76 +56,56 @@ export const BadgeImageThird = styled.img`
 
 export const NumberBadgeFirst = styled.div`
   align-items: center;
-  background-color: rgb(255, 78, 84);
-  border-radius: 50%; // Make it circular
-  color: rgb(246, 249, 252);
-  border-bottom-color: rgb(246, 249, 252);
+  background-color: ${theme.horizontalTitle};
+  border: 2px solid ${theme.textColor};
+  border-radius: 50%;
+  color: ${theme.textColor};
   display: flex;
   font-family: 'Rubik', sans-serif;
   font-size: 10px;
-  border-right-width: 2px;
-  border-left-width: 2px;
   height: 18px;
   justify-content: center;
-  margin-bottom: 0;
-  margin-left: 25px; // Adjusted margin-left to position it to the left
-  margin-right: 0;
-  margin-top: 40px; // Adjusted margin-top to position it above
+  margin: 40px 0 0 25px;
   padding: 0;
   position: absolute;
   top: 0;
   width: 18px;
-  border-right-color: rgb(246, 249, 252);
-  border-left-color: rgb(246, 249, 252);
 `;
+
 export const NumberBadgeSecond = styled.div`
   align-items: center;
-  background-color: rgb(255, 78, 84);
-  border-radius: 50%; // Make it circular
-  color: rgb(246, 249, 252);
-  border-bottom-color: rgb(246, 249, 252);
+  background-color: ${theme.horizontalTitle};
+  border: 2px solid ${theme.textColor};
+  border-radius: 50%;
+  color: ${theme.textColor};
   display: flex;
   font-family: 'Rubik', sans-serif;
   font-size: 10px;
-  border-right-width: 2px;
-  border-left-width: 2px;
   height: 18px;
   justify-content: center;
-  margin-bottom: 0;
-  margin-left: 29px; // Adjusted margin-left to position it to the left
-  margin-right: 0;
-  margin-top: 39px; // Adjusted margin-top to position it above
+  margin: 39px 0 0 29px;
   padding: 0;
   position: absolute;
   top: 0;
   width: 18px;
-  border-right-color: rgb(246, 249, 252);
-  border-left-color: rgb(246, 249, 252);
 `;
 
 export const NumberBadgeThird = styled.div`
   align-items: center;
-  background-color: rgb(255, 78, 84);
-  border-radius: 50%; // Make it circular
-  color: rgb(246, 249, 252);
-  border-bottom-color: rgb(246, 249, 252);
+  background-color: ${theme.horizontalTitle};
+  border: 2px solid ${theme.textColor};
+  border-radius: 50%;
+  color: ${theme.textColor};
   display: flex;
   font-family: 'Rubik', sans-serif;
   font-size: 10px;
-  border-right-width: 2px;
-  border-left-width: 2px;
   height: 18px;
   justify-content: center;
-  margin-bottom: 0;
-  margin-left: 38px; // Adjusted margin-left to position it to the left
-  margin-right: 0;
-  margin-top: 37px; // Adjusted margin-top to position it above
+  margin: 37px 0 0 38px;
   padding: 0;
   position: absolute;
   top: 0;
   width: 18px;
-  border-right-color: rgb(246, 249, 252);
-  border-left-color: rgb(246, 249, 252);
 `;
 
 export const BadgeImage = styled.img`
@@ -174,36 +141,16 @@ export const BadgelgContainer = styled.div`
 export const SmallBadgesStyled = styled.div`
   display: inline-block;
   position: relative;
-  margin-top: 35px;
-  margin-left: -17px;
+  margin: 35px 0 0 -17px;
 
   &::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgb(76, 175, 80);
-    border-bottom-color: rgb(246, 249, 252);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-image-outset: 0;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(246, 249, 252);
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-right-color: rgb(246, 249, 252);
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-top-color: rgb(246, 249, 252);
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-top-style: solid;
-    border-top-width: 2px;
+    background-color: ${theme.successColor};
+    border: 2px solid ${theme.textColor};
+    border-radius: 50%;
     display: block;
     font-family: 'Rubik', sans-serif;
     font-size: 6px;
@@ -229,36 +176,16 @@ export const MlImageStyled = styled.img`
 export const MlBadgesStyled = styled.div`
   display: inline-block;
   position: relative;
-  margin-top: 35px;
-  margin-left: -22px;
+  margin: 35px 0 0 -22px;
 
   &::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgb(255, 152, 0);
-    border-bottom-color: rgb(246, 249, 252);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-image-outset: 0;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(246, 249, 252);
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-right-color: rgb(246, 249, 252);
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-top-color: rgb(246, 249, 252);
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-top-style: solid;
-    border-top-width: 2px;
+    background-color: ${theme.secondaryColor};
+    border: 2px solid ${theme.textColor};
+    border-radius: 50%;
     display: block;
     font-family: 'Rubik', sans-serif;
     font-size: 6px;
@@ -305,28 +232,9 @@ export const LgBadgesStyled = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgb(244, 67, 54);
-    border-bottom-color: rgb(246, 249, 252);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-image-outset: 0;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(246, 249, 252);
-    border-left-style: solid;
-    border-left-width: 2px;
-    border-right-color: rgb(246, 249, 252);
-    border-right-style: solid;
-    border-right-width: 2px;
-    border-top-color: rgb(246, 249, 252);
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-top-style: solid;
-    border-top-width: 2px;
+    background-color: ${theme.horizontalTitle};
+    border: 2px solid ${theme.textColor};
+    border-radius: 50%;
     display: block;
     font-family: 'Rubik', sans-serif;
     font-size: 6px;

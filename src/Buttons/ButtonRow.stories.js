@@ -20,7 +20,7 @@ import {
   commonButtonStyles,
   TextButton,
   ButtonContainer,
-  buttonContainersStyles, // <-- Fix the capitalization here
+  buttonContainersStyles,
 } from './Button.Styled';
 
 import ButtonRow from './ButtonRow';

@@ -3,56 +3,18 @@ import theme from '../theme'; // Make sure this import is correct
 
 export const commonInputStyles = `
   background-color: ${theme.badgeText};
-  border-bottom-color: ${theme.inputBorder};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-left-color:${theme.inputBorder};
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: ${theme.inputBorder};
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-color: ${theme.inputBorder};
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-top-style: solid;
-  border-top-width: 1px;
+  border: 1px solid ${theme.inputBorder};
+  border-radius: 5px;
   color: ${theme.textLinkColor};
   cursor: text;
   display: block;
-  font-family: Arial;
-  font-feature-settings: normal;
-  font-kerning: auto;
-  font-optical-sizing: auto;
-  font-size: 18px;
-  font-stretch: 100%;
-  font-weight: 400;
+  font: 400 18px Arial;
   height: 21px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
   min-width: 510px;
-  padding-block-end: 8px;
-  padding-block-start: 8px;
-  padding-bottom: 8px;
-  padding-inline-end: 14px;
-  padding-inline-start: 14px;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 8px;
-  text-align: start;
-  text-indent: 0;
-  text-rendering: auto;
-  text-shadow: none;
-  text-transform: none;
-  transition-behavior: normal;
-  transition-delay: 0s;
-  transition-duration: 0.3s;
-  transition-property: all;
-  transition-timing-function: ease;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
   width: 510px;
-  word-spacing: 0;
 `;
 
 export const Container = styled.div`
@@ -109,8 +71,8 @@ export const Input = styled.input`
   ${({ type }) =>
     type === 'password' &&
     css`
-      border-color: ${theme.primary}; // Add the primary color as border color
-      box-shadow: 0 0 5px ${theme.primary}; // Add a box shadow with the primary color
+      border-color: ${theme.primary};
+      box-shadow: 0 0 5px ${theme.primary};
     `}
 `;
 export const InputError = styled.span`

@@ -1,58 +1,41 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
-export const CardContainer = styled.div`
-  align-items: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  column-gap: 10px;
-  display: flex;
-  flex-wrap: wrap;
+const commonStyless = `
+  display: block;
   font-family: 'Rubik', sans-serif;
   font-size: 6px;
-  height: 129.875px;
+`;
+
+const commonContainerStyle = `
+  ${commonStyless}
+  border-radius: 5px;
+  column-gap: 10px;
+  flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 15px;
-  row-gap: 10px;
+`;
+
+export const CardContainer = styled.div`
+  ${commonContainerStyle}
+  align-items: center;
+  height: 129.875px;
+  padding: 15px 50px;
   width: 695px;
 `;
 
 export const ErenYeagerCardContainer = styled.div`
+  ${commonContainerStyle}
   background-color: ${theme.textColor};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  column-gap: 10px;
-  display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  font-family: 'Rubik', sans-serif;
-  font-size: 6px;
   height: 109.875px;
   max-width: 300px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  row-gap: 10px;
-  transition-behavior: normal;
-  transition-delay: 0s;
-  transition-duration: 0.5s;
-  transition-property: all;
-  transition-timing-function: ease;
-  width: 300px;
+  padding: 10px;
+  transition: all 0.5s ease;
 `;
 
 export const ErenYeagerCardTitle = styled.p`
+  ${commonStyless}
   color: ${theme.horizontalTitle};
-  display: block;
-  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   font-weight: 600;
   height: 21.5px;
@@ -71,23 +54,22 @@ export const ErenYeagerCardText = styled.p`
 `;
 // --------
 
-export const EcommerceCardMainContainer = styled.div`
+const commonContainerStyles = `
   align-items: center;
-  background-color: ${theme.cardMain};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   column-gap: 10px;
   display: flex;
   flex-wrap: wrap;
   font-family: 'Rubik', sans-serif;
   font-size: 6px;
-  height: 490px;
   justify-content: center;
-  margin: 0;
+`;
+
+export const EcommerceCardMainContainer = styled.div`
+  ${commonContainerStyles}
+  background-color: ${theme.textColor};
+  border-radius: 5px;
+  height: 490px;
   padding: 15px 50px;
-  row-gap: 10px;
   width: 900px;
 `;
 
@@ -97,12 +79,13 @@ export const CardsImageContainer = styled.div`
 `;
 
 export const CardsImage = styled.img`
+  ${commonImageStyles}
   width: 100%;
   object-fit: cover;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+`;
+
+const commonImageStyles = `
+  border-radius: 5px;
 `;
 
 export const EcommerceCardBadge = styled.div`
@@ -147,53 +130,36 @@ export const EcommerceCardContainer = styled.div`
 `;
 
 export const DismissCardBadge = styled.div`
+  ${commonDismissCardBadgeStyles}
+`;
+
+const commonDismissCardBadgeStyles = `
   background-color: ${theme.horizontalTitle};
   color: ${theme.textColor};
   display: block;
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
   opacity: 0.8;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
+  padding: 5px 10px;
   position: absolute;
   right: 10px;
   top: 9px;
-  transition-behavior: normal;
-  transition-delay: 0s;
-  transition-duration: 0.8s;
-  transition-property: all;
-  transition-timing-function: ease;
+  transition: all 0.8s ease;
 `;
 
 export const commonStyles = `
-padding: 10px;
-border: none;
-cursor: pointer;
-border-radius: 4px;
-font-size: 14px;
-margin-right: 10px;
-font-family: Arial;
-font-weight: 600;
-padding-block-end: 11px;
-padding-block-start: 11px;
-padding-bottom: 11px;
-padding-inline-end: 28px;
-padding-inline-start: 28px;
-padding-left: 28px;
-padding-right: 28px;
-padding-top: 11px;
-margin-top: 15px;
-padding-block-end: 11px;
-padding-block-start: 11px;
-padding-bottom: 11px;
-padding-inline-end: 28px;
-padding-inline-start: 28px;
-padding-left: 28px;
-padding-right: 28px;
-padding-top: 11px;
-width: 300px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+  font-family: Arial;
+  font-weight: 600;
+  margin-top: 15px;
+  padding-block: 11px;
+  padding-inline: 28px;
+  width: 300px;
 `;
 
 const commonButtonStyles = `
@@ -222,11 +188,8 @@ export const PrimaryaStyledButton = styled(StyledButton)`
 
 export const DismissCardMainContainer = styled.div`
   align-items: center;
-  background-color: ${theme.cardMain};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background-color: ${theme.textColor};
+  border-radius: 5px;
   column-gap: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -262,54 +225,32 @@ export const CardsDismissText = styled.div`
 
 export const HorizontalMainContainer = styled.div`
   align-items: center;
-  background-color: ${theme.cardMain};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background-color: ${theme.textColor};
+  border-radius: 5px;
   column-gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  font-family: Rubik, sans-serif;
-  font-size: 6px;
+  font: 600 6px 'Rubik', sans-serif;
   height: 180px;
   justify-content: center;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 15px;
+  margin: 0;
+  padding: 15px 50px;
   row-gap: 10px;
   width: 900px;
 `;
 
 export const HorizontalContainer = styled.div`
   background-color: ${theme.textColor};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   column-gap: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-family: Rubik, sans-serif;
-  font-size: 6px;
+  font: 600 6px 'Rubik', sans-serif;
   height: 140px;
   max-width: 600px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  row-gap: 10px;
-  transition-behavior: normal;
-  transition-delay: 0s;
-  transition-duration: 0.5s;
-  transition-property: all;
-  transition-timing-function: ease;
+  padding: 10px;
+  transition: all 0.5s ease;
   width: 600px;
 `;
 
@@ -318,10 +259,7 @@ export const HorizontalImage = styled.img`
   font-family: Rubik, sans-serif;
   font-size: 6px;
   height: 90px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   position: relative;
   width: 100.789px;
 `;
@@ -361,60 +299,24 @@ export const HorizontalTitle = styled.div`
 
 export const commonStyle = `
   align-items: flex-start;
-  appearance: auto;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border-top-style: solid;
-  border-top-width: 1px;
+  border: 1px solid;
+  border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
   display: block;
-  font-family: Arial;
-  font-feature-settings: normal;
-  font-kerning: auto;
-  font-optical-sizing: auto;
-  font-stretch: 100%;
-  font-weight: 600;
+  font: 600 40px Arial;
   height: 40px;
-  margin-top: 45px;
-  padding-block-end: 11px;
-  padding-block-start: 11px;
-  padding-bottom: 11px;
-  padding-inline-end: 28px;
-  padding-inline-start: 28px;
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-top: 11px;
+  margin: 45px 0 0;
+  padding: 11px 28px;
   text-align: center;
-  text-indent: 0px;
-  text-rendering: auto;
-  text-shadow: none;
-  text-transform: none;
-  transition-behavior: normal;
-  transition-delay: 0s;
-  transition-duration: 0.3s;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 489.211px;
-  word-spacing: 0px;
-  -webkit-border-image: none;
+  word-spacing: 0;
 `;
 
 export const StyledButtons = styled.button`
   ${commonStyle}
+  font:600 14px Arial;
 `;
 
 export const PrimaryxStyledButton = styled(StyledButtons)`

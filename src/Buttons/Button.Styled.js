@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../theme';
 
 const commonStyles = `
-  padding: 10px;
+  padding: 11px 28px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -10,14 +10,6 @@ const commonStyles = `
   margin-right: 10px;
   font-family: Arial;
   font-weight: 600;
-  padding-block-end: 11px;
-  padding-block-start: 11px;
-  padding-bottom: 11px;
-  padding-inline-end: 28px;
-  padding-inline-start: 28px;
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-top: 11px;
 `;
 
 const commonButtonStyles = `

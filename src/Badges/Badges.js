@@ -19,9 +19,8 @@ import {
   BadgeImageThird,
   BadgesContainerFirst,
   BadgesContainerSecond,
-  BadgesContainerThird, // Corrected component name
+  BadgesContainerThird,
 } from './Badges.Styled';
-import { BadgesContainer, BadgeImage, NumberBadge } from './Badges.Styled';
 
 export const YourComponent = () => {
   return (
