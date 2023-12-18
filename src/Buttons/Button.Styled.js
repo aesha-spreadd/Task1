@@ -25,7 +25,7 @@ const commonButtonStyles = `
   &:active {
     color: ${theme.badgeText};
   }
-  margin-bottom: 10px; /* Add space between buttons */
+  margin-bottom: 10px; 
 `;
 
 const buttonContainerStyles = styled.div`
@@ -155,10 +155,9 @@ const handleTextButtonClick = () => {
 
 export const TextButtonPrimary = styled(StyledButton)`
   color: ${theme.primary};
-  background-color: transparent; /* No background color */
+  background-color: transparent; 
 
   &:active {
-    /* Add the click event handling function */
     console.log('Text button clicked');
   }
 `;
@@ -166,16 +165,16 @@ export const TextButtonPrimary = styled(StyledButton)`
 export const TextButtonSecondary = styled(StyledButton)`
   color: ${theme.secondary};
 
-  background-color: transparent; // No background color
+  background-color: transparent;
 `;
 export const TextButtonSuccess = styled(StyledButton)`
   color: ${theme.success};
 
-  background-color: transparent; // No background color
+  background-color: transparent;
 `;
 
 export const TextButtonWarning = styled(StyledButton)`
   color: ${theme.warning};
 
-  background-color: transparent; // No background color
+  background-color: transparent;
 `;

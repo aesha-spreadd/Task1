@@ -1,44 +1,31 @@
+// Avtar.js
 import React from 'react';
 import { SquareAvatar, CircleAvatar } from './Avtar.Styled';
 
-const Avatar = ({ square }) => {
+const Avatar = ({ square, avatars }) => {
   return (
     <div className="code-container">
       {square ? (
         <SquareAvatar>
-          <img
-            className="avatar avatar-square sm"
-            src="https://i.pravatar.cc/41"
-            alt="avatar-7"
-          />
-          <img
-            className="avatar avatar-square md"
-            src="https://i.pravatar.cc/42"
-            alt="avatar-6"
-          />
-          <img
-            className="avatar avatar-square lg"
-            src="https://i.pravatar.cc/43"
-            alt="avatar-5"
-          />
+          {avatars.map((avatar, index) => (
+            <img
+              key={index}
+              className={`avatar avatar-square ${avatar.size}`}
+              src={avatar.imageUrl}
+              alt={`avatar-${index}`}
+            />
+          ))}
         </SquareAvatar>
       ) : (
         <CircleAvatar>
-          <img
-            className="avatar avatar-circular sm"
-            src="https://i.pravatar.cc/43"
-            alt="avatar-2"
-          />
-          <img
-            className="avatar avatar-circular md"
-            src="https://i.pravatar.cc/44"
-            alt="avatar-3"
-          />
-          <img
-            className="avatar avatar-circular lg"
-            src="https://i.pravatar.cc/45"
-            alt="avatar-4"
-          />
+          {avatars.map((avatar, index) => (
+            <img
+              key={index}
+              className={`avatar avatar-circular ${avatar.size}`}
+              src={avatar.imageUrl}
+              alt={`avatar-${index}`}
+            />
+          ))}
         </CircleAvatar>
       )}
     </div>

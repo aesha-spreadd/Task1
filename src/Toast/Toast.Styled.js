@@ -1,12 +1,15 @@
+// Import necessary libraries and theme
 import styled from 'styled-components';
 import theme from '../theme';
 
+// Define base styles
 export const baseStyles = `
   font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
 `;
 
+// Common styles for all toast types
 export const commonToastStyles = `
   ${baseStyles}
   display: block;
@@ -23,6 +26,7 @@ export const commonToastStyles = `
   border-bottom-right-radius: 5px;
 `;
 
+// Define the ToastContainer component with props
 export const ToastContainer = styled.div`
   ${baseStyles}
   align-items: center;
@@ -33,8 +37,8 @@ export const ToastContainer = styled.div`
   column-gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  font-size: 6px;
-  height: 40px;
+  font-size: ${(props) => props.fontSize || '6px'};
+  height: ${(props) => props.containerHeight || '40px'};
   justify-content: center;
   margin-bottom: 0;
   margin-left: 0;
@@ -48,25 +52,27 @@ export const ToastContainer = styled.div`
   width: 904px;
 `;
 
+// Styled components for different toast types
 export const ToastSuccess = styled.div`
   ${commonToastStyles}
-  border: 1px solid ${theme.successColor};
+  border: 1px solid ${(props) => props.borderColor || theme.successColor};
 `;
 
 export const ToastDanger = styled.div`
   ${commonToastStyles}
-  border: 1px solid rgb(244, 67, 54);
+  border: 1px solid ${(props) => props.borderColor || 'rgb(244, 67, 54)'};
 `;
 
 export const ToastWarning = styled.div`
   ${commonToastStyles}
-  border: 1px solid ${theme.secondaryColor};
+  border: 1px solid ${(props) => props.borderColor || theme.secondaryColor};
 `;
 
+// Styled components for text within the toast
 export const ToastText = styled.p`
   ${baseStyles}
-  font-size: 15px;
-  color: ${theme.successColor};
+  font-size: ${(props) => props.fontSize || '15px'};
+  color: ${(props) => props.textColor || theme.successColor};
   width: 250px;
   display: block;
   height: 18px;
@@ -76,8 +82,8 @@ export const ToastText = styled.p`
 
 export const ToastTextD = styled.p`
   ${baseStyles}
-  font-size: 15px;
-  color: rgb(211, 22, 9);
+  font-size: ${(props) => props.fontSize || '15px'};
+  color: ${(props) => props.textColor || 'rgb(211, 22, 9)'};
   width: 250px;
   display: block;
   height: 18px;
@@ -87,8 +93,8 @@ export const ToastTextD = styled.p`
 
 export const ToastTextW = styled.p`
   ${baseStyles}
-  font-size: 15px;
-  color: ${theme.secondaryColor};
+  font-size: ${(props) => props.fontSize || '15px'};
+  color: ${(props) => props.textColor || theme.secondaryColor};
   width: 250px;
   display: block;
   height: 18px;

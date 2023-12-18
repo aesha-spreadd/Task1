@@ -1,12 +1,19 @@
+// Images.stories.js
 import React from 'react';
-
-import { Images, Circle, Responsive } from './Images'; // Correct import statement
+import { Images, Circle, Responsive } from './Images';
 
 export default {
   title: 'Images',
   component: Images,
 };
 
-export const SquareImage = () => <Images />;
-export const CircularImage = () => <Circle />;
-export const ResponsiveImage = () => <Responsive />;
+const imageArray = [
+  'https://picsum.photos/350/350/?blur',
+  'https://picsum.photos/350/351/?blur',
+];
+
+const imagesArray = ['https://picsum.photos/350/350/?blur'];
+
+export const SquareImage = () => <Images imageArray={imageArray} />;
+export const CircularImage = () => <Circle imageArray={imageArray} />;
+export const ResponsiveImage = () => <Responsive imageArray={imagesArray} />;

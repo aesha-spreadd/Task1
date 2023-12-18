@@ -1,3 +1,4 @@
+// MyComponent.js
 import React from 'react';
 import {
   ToastContainer,
@@ -9,20 +10,32 @@ import {
   ToastTextW,
 } from './Toast.Styled';
 
-export const Toast = () => {
-  return (
-    <ToastContainer>
-      <ToastSuccess>
-        <ToastText>Successful toast for user action.</ToastText>
-      </ToastSuccess>
+const Toast = ({ type, text }) => {
+  switch (type) {
+    case 'success':
+      return (
+        <ToastSuccess>
+          <ToastText>{text}</ToastText>
+        </ToastSuccess>
+      );
 
-      <ToastWarning>
-        <ToastTextW>Warning toast for user action.</ToastTextW>
-      </ToastWarning>
+    case 'warning':
+      return (
+        <ToastWarning>
+          <ToastTextW>{text}</ToastTextW>
+        </ToastWarning>
+      );
 
-      <ToastDanger>
-        <ToastTextD>Danger toast for user action.</ToastTextD>
-      </ToastDanger>
-    </ToastContainer>
-  );
+    case 'danger':
+      return (
+        <ToastDanger>
+          <ToastTextD>{text}</ToastTextD>
+        </ToastDanger>
+      );
+
+    default:
+      return null;
+  }
 };
+
+export default Toast;

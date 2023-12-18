@@ -14,10 +14,6 @@ export const CardContainer = styled.div`
   font-size: 6px;
   height: 129.875px;
   justify-content: center;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
   padding-bottom: 15px;
   padding-left: 50px;
   padding-right: 50px;
@@ -27,7 +23,7 @@ export const CardContainer = styled.div`
 `;
 
 export const ErenYeagerCardContainer = styled.div`
-  background-color: rgb(246, 249, 252);
+  background-color: ${theme.textColor};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -39,10 +35,6 @@ export const ErenYeagerCardContainer = styled.div`
   font-family: 'Rubik', sans-serif;
   font-size: 6px;
   height: 109.875px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
   max-width: 300px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -58,46 +50,30 @@ export const ErenYeagerCardContainer = styled.div`
 `;
 
 export const ErenYeagerCardTitle = styled.p`
-  color: rgb(255, 78, 84);
+  color: ${theme.horizontalTitle};
   display: block;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   font-weight: 600;
   height: 21.5px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   width: 300px;
 `;
 
 export const ErenYeagerCardText = styled.p`
-  color: rgb(74, 74, 104);
+  color: ${theme.inputBorder};
   display: block;
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
   font-weight: 400;
   height: 78.375px;
   line-height: 19.6px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   width: 300px;
 `;
 // --------
 
 export const EcommerceCardMainContainer = styled.div`
   align-items: center;
-  background-color: rgb(255, 237, 237);
+  background-color: ${theme.cardMain};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -171,8 +147,8 @@ export const EcommerceCardContainer = styled.div`
 `;
 
 export const DismissCardBadge = styled.div`
-  background-color: rgb(255, 78, 84);
-  color: rgb(246, 249, 252);
+  background-color: ${theme.horizontalTitle};
+  color: ${theme.textColor};
   display: block;
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
@@ -224,9 +200,8 @@ const commonButtonStyles = `
   &:hover,
   &:active {
     color: ${theme.badgeText};
-    /* Add any additional styles for hover state */
   }
-  margin-bottom: 10px; /* Add space between buttons */
+  margin-bottom: 10px; 
 `;
 
 export const StyledButton = styled.button`
@@ -247,7 +222,7 @@ export const PrimaryaStyledButton = styled(StyledButton)`
 
 export const DismissCardMainContainer = styled.div`
   align-items: center;
-  background-color: rgb(255, 237, 237);
+  background-color: ${theme.cardMain};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -287,7 +262,7 @@ export const CardsDismissText = styled.div`
 
 export const HorizontalMainContainer = styled.div`
   align-items: center;
-  background-color: rgb(255, 237, 237);
+  background-color: ${theme.cardMain};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -312,7 +287,7 @@ export const HorizontalMainContainer = styled.div`
 `;
 
 export const HorizontalContainer = styled.div`
-  background-color: rgb(246, 249, 252);
+  background-color: ${theme.textColor};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -324,10 +299,6 @@ export const HorizontalContainer = styled.div`
   font-family: Rubik, sans-serif;
   font-size: 6px;
   height: 140px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
   max-width: 600px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -351,14 +322,6 @@ export const HorizontalImage = styled.img`
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   position: relative;
   width: 100.789px;
 `;
@@ -371,14 +334,6 @@ export const HorizontalBody = styled.div`
   font-size: 6px;
   height: 120.281px;
   justify-content: space-between;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   width: 489.211px;
 `;
 
@@ -389,32 +344,18 @@ export const HorizontalText = styled.div`
   font-size: 14px;
   font-weight: 400;
   height: 21.5px;
-  margin-bottom: px;
-  margin-left: 0px;
-  margin-right: 0px;
   margin-top: 9px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   width: 489.211px;
 `;
 
 export const HorizontalTitle = styled.div`
-  color: rgb(255, 78, 84);
+  color: ${theme.horizontalTitle};
   display: block;
   font-family: Rubik, sans-serif;
   font-size: 18px;
   font-weight: 600;
   height: 21.5px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
   margin-top: 2px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
   width: 489.211px;
 `;
 
@@ -446,21 +387,8 @@ export const commonStyle = `
   font-kerning: auto;
   font-optical-sizing: auto;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-alternates: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
-  font-variant-position: normal;
-  font-variation-settings: normal;
   font-weight: 600;
   height: 40px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
   margin-top: 45px;
   padding-block-end: 11px;
   padding-block-start: 11px;

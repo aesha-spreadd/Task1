@@ -30,18 +30,10 @@ export const ImageStyled = styled.img`
   font-family: 'Rubik', sans-serif;
   font-size: 6px;
   height: 150px;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
   object-fit: cover;
   overflow-clip-margin: content-box;
   overflow-x: clip;
   overflow-y: clip;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
   width: 150px;
 `;
 
@@ -54,18 +46,10 @@ export const ImageStyledCircle = styled.img`
   font-family: 'Rubik', sans-serif;
   font-size: 6px;
   height: 150px;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
   object-fit: cover;
   overflow-clip-margin: content-box;
   overflow-x: clip;
   overflow-y: clip;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
   width: 150px;
 `;
 
@@ -82,10 +66,6 @@ export const ContainerResponsive = styled.div`
   font-size: 6px;
   height: 59.5px;
   justify-content: center;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
   padding-bottom: 15px;
   padding-left: 50px;
   padding-right: 50px;
@@ -101,13 +81,10 @@ export const StyledImage = styled.img`
   font-family: 'Rubik', sans-serif;
   font-size: 6px;
   height: auto;
-  margin: 0;
   object-fit: cover;
   overflow: hidden;
   padding: 0;
   width: 100%;
-
-  /* Additional styles for responsiveness */
   @media (max-width: 768px) {
     width: 100%;
     height: auto;

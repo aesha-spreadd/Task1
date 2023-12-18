@@ -1,22 +1,23 @@
 import styled from 'styled-components';
+import theme from '../theme';
 
 export const NavbarMainContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(255, 237, 237);
+  background-color: ${theme.cardMain};
   border-radius: 5px;
   padding: 15px 50px;
   width: 900px;
 `;
 
 export const NavbarContainer = styled.div`
-  background-color: rgb(246, 249, 252);
+  background-color: ${theme.CardMain};
   font-family: Rubik, sans-serif;
   font-size: 6px;
   height: 35px;
   padding: 20px 10px;
-  width: 990px;
+  width: 1000px;
 `;
 
 export const NavbarContainerWith = styled.div`
@@ -28,7 +29,7 @@ export const NavbarContainerWith = styled.div`
   font-family: Rubik, sans-serif;
   font-size: 6px;
   height: 35px;
-  width: 624px;
+  //width: 624px;
 `;
 
 export const NavbarLinks = styled.div`
@@ -51,12 +52,12 @@ export const NavbarList = styled.div`
 `;
 
 export const NavbarTitle = styled.p`
-  color: rgb(255, 78, 84);
+  color: ${theme.horizontalTitle};
   cursor: pointer;
   font-family: Rubik, sans-serif;
   font-size: 28px;
   font-weight: 600;
-  text-decoration-color: rgb(255, 78, 84);
+  text-decoration-color: ${theme.horizontalTitle};
   transition: all 0.3s ease;
 `;
 
@@ -77,8 +78,8 @@ export const InputContainer = styled.div`
 
 export const StyledInput = styled.input`
   appearance: auto;
-  background-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(74, 74, 104);
+  background-color: ${theme.textColor};
+  border-bottom-color: ${theme.inputBorder};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-style: solid;
@@ -88,18 +89,18 @@ export const StyledInput = styled.input`
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
-  border-left-color: rgb(74, 74, 104);
+  border-left-color: ${theme.inputBorder};
   border-left-style: solid;
   border-left-width: 1px;
-  border-right-color: rgb(74, 74, 104);
+  border-right-color: ${theme.inputBorder};
   border-right-style: solid;
   border-right-width: 1px;
-  border-top-color: rgb(74, 74, 104);
+  border-top-color: ${theme.inputBorder};
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-top-style: solid;
   border-top-width: 1px;
-  color: rgb(0, 0, 0);
+  color: ${theme.textLinkColors};
   cursor: text;
   display: block;
   font-family: Arial;
@@ -139,30 +140,29 @@ export const StyledInput = styled.input`
 export const StyledButton = styled.button`
   align-items: flex-start;
   appearance: auto;
-  background-color: rgb(246, 249, 252);
-  border-bottom-color: rgb(74, 74, 104);
+  background-color: ${theme.textColor};
+  border-bottom-color: ${theme.inputBorder};
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-image-outset: 0;
   border-image-repeat: stretch;
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
-  border-left-color: rgb(74, 74, 104);
+  border-left-color: ${theme.inputBorder};
   border-left-style: solid;
   border-left-width: 1px;
-  border-right-color: rgb(74, 74, 104);
+  border-right-color: ${theme.inputBorder};
   border-right-style: solid;
   border-right-width: 1px;
-  border-top-color: rgb(74, 74, 104);
+  border-top-color: ${theme.inputBorder};
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-top-style: solid;
   border-top-width: 1px;
   box-sizing: border-box;
-  color: rgb(74, 74, 104);
+  color: ${theme.inputBorder};
   cursor: pointer;
   display: block;
   font-family: Arial;
@@ -191,7 +191,7 @@ export const StyledButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgb(200, 220, 240);
+    background-color: ${theme.navbarHover};
   }
 
   width: 96.1016px;
@@ -216,8 +216,8 @@ export const BadgeCount = styled.div`
   align-items: center;
   margin-top: 2px;
   margin-right: -25px;
-  background-color: rgb(255, 78, 84);
-  border-bottom-color: rgb(246, 249, 252);
+  background-color: ${theme.horizontalTitle};
+  border-bottom-color: ${theme.textColor};
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-style: solid;
@@ -227,18 +227,18 @@ export const BadgeCount = styled.div`
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
-  border-left-color: rgb(246, 249, 252);
+  border-left-color: ${theme.textColor};
   border-left-style: solid;
   border-left-width: 2px;
-  border-right-color: rgb(246, 249, 252);
+  border-right-color: ${theme.textColor};
   border-right-style: solid;
   border-right-width: 2px;
-  border-top-color: rgb(246, 249, 252);
+  border-top-color: ${theme.textColor};
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-top-style: solid;
   border-top-width: 2px;
-  color: rgb(246, 249, 252);
+  color: ${theme.textColor};
   display: flex;
   font-family: Rubik, sans-serif;
   font-size: 10px;
@@ -251,11 +251,11 @@ export const BadgeCount = styled.div`
 `;
 
 export const NavbarText = styled.p`
-  display: flex; /* Add this */
-  align-items: center; /* Add this */
-  color: rgb(74, 74, 104);
+  display: flex;
+  align-items: center;
+  color: ${theme.inputBorder};
   cursor: pointer;
-  margin-left: 160px;
+  margin-left: 90px;
   margin-top: -45px;
   font-family: Rubik, sans-serif;
   font-size: 16px;
@@ -266,7 +266,7 @@ export const NavbarText = styled.p`
   list-style-position: outside;
   list-style-type: none;
   text-align: left;
-  text-decoration-color: rgb(74, 74, 104);
+  text-decoration-color: ${theme.inputBorder};
   text-decoration-line: none;
   text-decoration-style: solid;
   text-decoration-thickness: auto;

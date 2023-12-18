@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Container,
   InputGroup,
@@ -8,19 +9,22 @@ import {
   InputError,
 } from './Inputs.Styled';
 
-export const Inputs = () => {
+const LabeledInput = ({ label, type, error }) => {
   return (
-    <Container>
-      <InputGroup>
-        <Label>Username *</Label>
-        <Input type="text" className="au-input" />
-      </InputGroup>
-
-      <InputGroup>
-        <LabelP>Password *</LabelP>
-        <Input type="password" className="au-input" />
-        <InputError>Password is incorrect</InputError>
-      </InputGroup>
-    </Container>
+    <InputGroup>
+      {type === 'password' ? (
+        <LabelP>{label} *</LabelP>
+      ) : (
+        <Label>{label} *</Label>
+      )}
+      <Input type={type} className="au-input" />
+      {error && <InputError>{error}</InputError>}
+    </InputGroup>
   );
+};
+
+LabeledInput.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  error: PropTypes.string,
 };

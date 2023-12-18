@@ -28,21 +28,9 @@ export const commonInputStyles = `
   font-optical-sizing: auto;
   font-size: 18px;
   font-stretch: 100%;
-  font-style: normal;
-  font-variant-alternates: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
-  font-variant-position: normal;
-  font-variation-settings: normal;
   font-weight: 400;
   height: 21px;
-  letter-spacing: normal;
-  line-height: normal;
   margin-bottom: 10px;
-  margin-left: 0;
-  margin-right: 0;
   margin-top: 10px;
   min-width: 510px;
   padding-block-end: 8px;
@@ -77,7 +65,6 @@ export const Container = styled.div`
   font-size: 6px;
   height: 182px;
   justify-content: center;
-  margin: 0;
   padding: 15px 50px;
   row-gap: 10px;
   width: 904px;
@@ -112,8 +99,6 @@ export const LabelP = styled.label`
   font-family: 'Rubik', sans-serif;
   font-size: 15px;
   height: 18px;
-  margin: 0;
-  padding: 0;
   width: 540px;
   color: ${theme.primary};
 `;
