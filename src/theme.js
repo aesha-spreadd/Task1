@@ -16,6 +16,16 @@ const theme = {
   buttonOutlinedSecondaryColorHover: '#fff',
   badgeBg: '#ff3d00',
   badgeText: '#fff',
+  textLinkColors: '#000',
+  inputBorder: 'rgb(74, 74, 104)',
+  textColor: 'rgb(246, 249, 252)',
+  successColor: 'rgb(76, 175, 80)',
+  dangerColor: 'rgb(244, 67, 54)',
+  secondaryColor: 'rgb(255, 152, 0)',
+  horizontalTitle: 'rgb(255, 78, 84);',
+  cardMain: 'rgb(255, 237, 237)',
+  toastTextD: 'rgb(211, 22, 9)',
+  navbarHover: 'rgb(200, 220, 240)',
 };
 
 export default theme;

@@ -1,38 +1,37 @@
 import styled from 'styled-components';
-import theme from './theme'; // Import your theme file
+import theme from '../theme';
 
 const commonStyles = `
-  padding: 10px;
+  padding: 11px 28px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
   margin-right: 10px;
-  font-family:Arial;
-  border-bottom-left-radius :2px;
-border-bottom-right-radius: 2px;
-border-top-left-radius: 2px;
-border-top-right-radius: 2px;
+  font-family: Arial;
+  font-weight: 600;
 `;
+
 const commonButtonStyles = `
   &:hover,
   &:active {
-    color: white;
+    color: ${theme.badgeText};
   }
-  margin-bottom: 10px; /* Add space between buttons */
+  margin-bottom: 10px; 
+`;
+
+const buttonContainerStyles = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+`;
+
+export const ButtonContainer = styled.div`
+  ${buttonContainerStyles}
 `;
 
 export const StyledButton = styled.button`
   ${commonStyles}
-`;
-
-const handlePrimaryClick = () => {
-  console.log('Primary button clicked');
-};
-
-export const ButtonIcon = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 export const IconImg = styled.img`
@@ -41,103 +40,104 @@ export const IconImg = styled.img`
   margin-right: 8px;
 `;
 
+export const ButtonIcon = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const PrimaryStyledButton = styled(StyledButton)`
   background-color: ${theme.primary};
-  color: white;
+  color: ${theme.badgeText};
   border: 1px solid ${theme.primary};
 
   &:hover,
   &:active {
     background-color: ${theme.primary};
-    color: white;
+    color: ${theme.badgeText};
   }
+`;
 
+export const SecondaryStyledButton = styled(StyledButton)`
+  background-color: ${theme.secondary};
+  color: ${theme.badgeText};
+  border: 1px solid ${theme.secondary};
+
+  &:hover,
   &:active {
-    ${handlePrimaryClick}
+    background-color: ${theme.secondary};
+    color: ${theme.badgeText};
+  }
+`;
+
+export const SuccessStyledButton = styled(StyledButton)`
+  background-color: ${theme.success};
+  color: ${theme.badgeText};
+  border: 1px solid ${theme.success};
+
+  &:hover,
+  &:active {
+    background-color: ${theme.success};
+    color: ${theme.badgeText};
+  }
+`;
+
+export const WarningStyledButton = styled(StyledButton)`
+  background-color: ${theme.warning};
+  color: ${theme.badgeText};
+  border: 1px solid ${theme.warning};
+
+  &:hover,
+  &:active {
+    background-color: ${theme.warning};
+    color: ${theme.badgeText};
   }
 `;
 
 export const ContainedPrimaryStyledButton = styled(StyledButton)`
-  background-color: white;
+  background-color: ${theme.badgeText};
   color: ${theme.primary};
   border: 1px solid ${theme.primary};
 
   &:hover,
   &:active {
     background-color: ${theme.primary};
-    color: white;
-  }
-`;
-
-export const SecondaryStyledButton = styled(StyledButton)`
-  background-color: ${theme.secondary};
-  color: white;
-  border: 1px solid ${theme.secondary};
-
-  &:hover,
-  &:active {
-    background-color: ${theme.secondary};
-    color: white;
-  }
-`;
-
-export const SuccessStyledButton = styled(StyledButton)`
-  background-color: ${theme.success};
-  color: white;
-  border: 1px solid ${theme.success};
-
-  &:hover,
-  &:active {
-    background-color: ${theme.success};
-    color: white;
-  }
-`;
-
-export const WarningStyledButton = styled(StyledButton)`
-  background-color: ${theme.warning};
-  color: white;
-  border: 1px solid ${theme.warning};
-
-  &:hover,
-  &:active {
-    background-color: ${theme.warning};
-    color: white;
+    color: ${theme.badgeText};
   }
 `;
 
 export const ContainedSecondaryStyledButton = styled(StyledButton)`
-  background-color: white;
+  background-color: ${theme.badgeText};
   color: ${theme.secondary};
   border: 1px solid ${theme.secondary};
 
   &:hover,
   &:active {
     background-color: ${theme.secondary};
-    color: white;
+    color: ${theme.badgeText};
   }
 `;
 
 export const ContainedSuccessStyledButton = styled(StyledButton)`
-  background-color: white;
+  background-color: ${theme.badgeText};
   color: ${theme.success};
   border: 1px solid ${theme.success};
 
   &:hover,
   &:active {
     background-color: ${theme.success};
-    color: white;
+    color: ${theme.badgeText};
   }
 `;
 
 export const ContainedWarningStyledButton = styled(StyledButton)`
-  background-color: white;
+  background-color: ${theme.badgeText};
   color: ${theme.warning};
   border: 1px solid ${theme.warning};
 
   &:hover,
   &:active {
     background-color: ${theme.warning};
-    color: white;
+    color: ${theme.badgeText};
   }
 `;
 
@@ -147,29 +147,26 @@ const handleTextButtonClick = () => {
 
 export const TextButtonPrimary = styled(StyledButton)`
   color: ${theme.primary};
-  background-color: transparent; // No background color
+  background-color: transparent; 
 
-  /* Add the click event handling function */
   &:active {
-    ${handleTextButtonClick}
+    console.log('Text button clicked');
   }
 `;
-
-// ... (other text button styles)
 
 export const TextButtonSecondary = styled(StyledButton)`
   color: ${theme.secondary};
 
-  background-color: transparent; // No background color
+  background-color: transparent;
 `;
 export const TextButtonSuccess = styled(StyledButton)`
   color: ${theme.success};
 
-  background-color: transparent; // No background color
+  background-color: transparent;
 `;
 
 export const TextButtonWarning = styled(StyledButton)`
   color: ${theme.warning};
 
-  background-color: transparent; // No background color
+  background-color: transparent;
 `;
