@@ -11,6 +11,7 @@ const containerStyles = css`
   justify-content: center;
   padding: 15px 50px;
   row-gap: 10px;
+  margin:10px;
 `;
 
 const imageStyles = css`
